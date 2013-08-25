@@ -1,0 +1,1 @@
+define(["underscore","backbone","localstorage","models/model"],function(e,t,n,r){var i=t.Collection.extend({model:r,localStorage:new n("models-backbone")});return new i});

@@ -1,0 +1,1 @@
+define(["jquery","underscore","backbone","thorax","collections/collection","text!templates/app.handlebars","common"],function(e,t,n,r,i,s,o){return r.View.extend({name:"app",template:Handlebars.compile(s),events:{},initialize:function(){this.render()}})});

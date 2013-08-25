@@ -7,7 +7,7 @@ This boilerplate use "http://html5boilerplate.com/" as a main boilerplate for HT
 
 ### Build
 
-run with this command at the app root `r.js -o js/libs/build.js`
+run with this command at the app root `r.js -o js/lib/build.js`
 
 ### Libraries Version
 

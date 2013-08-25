@@ -1,0 +1,1 @@
+define(["jquery","backbone","thorax"],function(e,t,n){return n.Router.extend({routes:{}})});
