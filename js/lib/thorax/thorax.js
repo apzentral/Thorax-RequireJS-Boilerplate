@@ -1,15 +1,15 @@
 // Copyright (c) 2011-2012 @WalmartLabs
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to
 // deal in the Software without restriction, including without limitation the
 // rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
 // sell copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -17,7 +17,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
-// 
+//
 (function() {
 
 var Thorax;
@@ -130,7 +130,7 @@ Thorax.Util = {
     return typeof obj === 'object' && ('length' in obj);
   },
   expandToken: function(input, scope) {
-    
+
     if (input && input.indexOf && input.indexOf('{' + '{') >= 0) {
       var re = /(?:\{?[^{]+)|(?:\{\{([^}]+)\}\})/g,
           match,
@@ -218,7 +218,7 @@ Thorax.Util = {
 Thorax.View = Backbone.View.extend({
   constructor: function() {
     var response = Thorax.View.__super__.constructor.apply(this, arguments);
-    
+
   if (this.model) {
     //need to null this.model so setModel will not treat
     //it as the old model and immediately return
@@ -230,7 +230,7 @@ Thorax.View = Backbone.View.extend({
     return response;
   },
   _configure: function(options) {
-    
+
   this._modelEvents = [];
 
   this._collectionEvents = [];
@@ -248,10 +248,10 @@ Thorax.View = Backbone.View.extend({
     if (typeof this.template === 'string') {
       this.template = Handlebars.compile(this.template);
     } else if (this.name && !this.template) {
-      //fetch the template 
+      //fetch the template
       this.template = Thorax.Util.registryGet(Thorax, 'templates', this.name, true);
     }
-    
+
   //HelperView will not have mixins so need to check
   this.constructor.mixins && _.each(this.constructor.mixins, applyMixin, this);
   this.mixins && _.each(this.mixins, applyMixin, this);
@@ -273,7 +273,7 @@ Thorax.View = Backbone.View.extend({
     if (this.name) {
       this.$el.attr(viewNameAttributeName, this.name);
     }
-    this.$el.attr(viewCidAttributeName, this.cid);      
+    this.$el.attr(viewCidAttributeName, this.cid);
   },
 
   _addChild: function(view) {
@@ -356,7 +356,7 @@ Thorax.View = Backbone.View.extend({
       return template(data);
     }
   },
-  
+
   _loadTemplate: function(file, ignoreErrors) {
     return Thorax.Util.registryGet(Thorax, 'templates', file, ignoreErrors);
   },
@@ -364,7 +364,7 @@ Thorax.View = Backbone.View.extend({
   ensureRendered: function() {
     !this._renderCount && this.render();
   },
-  
+
   html: function(html) {
     if (typeof html === 'undefined') {
       return this.el.innerHTML;
@@ -379,7 +379,7 @@ Thorax.View = Backbone.View.extend({
 
 Thorax.View.extend = function() {
   var child = Backbone.View.extend.apply(this, arguments);
-  
+
   child.mixins = _.clone(this.mixins);
 
   Thorax.Util._cloneEvents(this, child, '_events');
@@ -398,7 +398,7 @@ Handlebars.registerHelper('super', function() {
   var parent = this._view.constructor && this._view.constructor.__super__;
   if (parent) {
     var template = parent.template;
-    if (!template) { 
+    if (!template) {
       if (!parent.name) {
         throw new Error('Cannot use super helper when parent has no name or template.');
       }
@@ -491,7 +491,7 @@ Handlebars.registerViewHelper = function(name, viewClass, callback) {
   var helper = Handlebars.helpers[name];
   return helper;
 };
-  
+
 //called from View.prototype.html()
 Thorax.View.prototype._appendViews = function(scope, callback) {
   (scope || this.$el).find('[' + viewPlaceholderAttributeName + ']').forEach(function(el) {
@@ -588,7 +588,7 @@ var _destroy = Thorax.View.prototype.destroy,
 _.extend(Thorax.View, {
   _events: [],
   on: function(eventName, callback) {
-    
+
   if (eventName === 'model' && typeof callback === 'object') {
     return addEvents(this._modelEvents, callback);
   }
@@ -619,7 +619,7 @@ _.extend(Thorax.View, {
 
 _.extend(Thorax.View.prototype, {
   freeze: function(options) {
-    
+
   this.model && this._unbindModelEvents();
 
     options = _.defaults(options || {}, {
@@ -647,7 +647,7 @@ _.extend(Thorax.View.prototype, {
     return response;
   },
   on: function(eventName, callback, context) {
-    
+
   if (eventName === 'model' && typeof callback === 'object') {
     return addEvents(this._modelEvents, callback);
   }
@@ -741,7 +741,7 @@ var domEvents = [
   'keyup', 'keydown', 'keypress',
   'submit', 'change',
   'focus', 'blur'
-  
+
 ];
 var domEventRegexp = new RegExp('^(' + domEvents.join('|') + ')');
 
@@ -1411,7 +1411,7 @@ Handlebars.registerViewHelper('empty', function(collection, view) {
     view.on(collection, 'add', collectionAddCallback);
     view.on(collection, 'reset', collectionResetCallback);
   }
-  
+
   view.render();
 });
 
@@ -1533,7 +1533,7 @@ _.extend(Thorax.View.prototype, {
     },options || {});
 
     var attributes = options.attributes || {};
-    
+
     //callback has context of element
     var view = this;
     var errors = [];
@@ -1571,7 +1571,7 @@ _.extend(Thorax.View.prototype, {
         return false;
       };
     }
-    
+
     callback && callback.call(this, attributes, _.bind(resetSubmitState, this));
     return attributes;
   },
@@ -1641,9 +1641,9 @@ _.extend(Thorax.View.prototype, {
 });
 
 Thorax.View.on({
-  error: function() {  
+  error: function() {
     resetSubmitState.call(this);
-  
+
     // If we errored with a model we want to reset the content but leave the UI
     // intact. If the user updates the data and serializes any overwritten data
     // will be restored.
@@ -1739,7 +1739,7 @@ Thorax.LayoutView = Thorax.View.extend({
     }
     //a template is optional in a layout
     if (output || this.template || layoutTemplate) {
-      //but if present, it must have embedded an element containing layoutCidAttributeName 
+      //but if present, it must have embedded an element containing layoutCidAttributeName
       var response = Thorax.View.prototype.render.call(this, output || this.template || layoutTemplate);
       ensureLayoutViewsTargetElement.call(this);
       return response;
@@ -1898,13 +1898,13 @@ Thorax.loadHandler = function(start, end) {
           try {
             if (!events.length) {
               var run = self._loadStart.run;
-  
+
               if (run) {
                 // Emit the end behavior, but only if there is a paired start
                 end.call(self, self._loadStart.background, self._loadStart);
                 self._loadStart.trigger(loadEnd, self._loadStart);
               }
-  
+
               // If stopping make sure we don't run a start
               clearTimeout(self._loadStart.timeout);
               self._loadStart = undefined;
@@ -1946,12 +1946,12 @@ Thorax.forwardLoadEvents = function(source, dest, once) {
  * Mixing for generating load:start and load:end events.
  */
 Thorax.mixinLoadable = function(target, useParent) {
-  _.extend(target, {  
+  _.extend(target, {
     //loading config
     _loadingClassName: 'loading',
     _loadingTimeoutDuration: 0.33,
     _loadingTimeoutEndDuration: 0.10,
-  
+
     // Propagates loading view parameters to the AJAX layer
     onLoadStart: function(message, background, object) {
       var that = useParent ? this.parent : this;

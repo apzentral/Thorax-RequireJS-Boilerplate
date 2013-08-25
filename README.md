@@ -9,10 +9,12 @@ This boilerplate use "http://html5boilerplate.com/" as a main boilerplate for HT
 
 * Html5Boilerplate: Version 4.2.0
 * jQuery: Version 1.10.2
-* BackBone: Version
+* BackBone: Version 1.0.0
+* localstorage: Version 1.1.6
 * UnderScore: Version
-* RequireJS: Version
+* RequireJS: Version 2.1.8
 * Thorax: Version
+* Handlebars: Version 1.0.0
 * Modernizr: Version 2.6.2
 * Bootstrap: Version 3.0.0
 * FontAwesome: Version 3.2.1
