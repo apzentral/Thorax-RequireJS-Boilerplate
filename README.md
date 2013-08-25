@@ -11,9 +11,9 @@ This boilerplate use "http://html5boilerplate.com/" as a main boilerplate for HT
 * jQuery: Version 1.10.2
 * BackBone: Version 1.0.0
 * localstorage: Version 1.1.6
-* UnderScore: Version
+* Lo-Dash: Version 1.3.1
 * RequireJS: Version 2.1.8
-* Thorax: Version
+* Thorax: Version 2.0.0b3
 * Handlebars: Version 1.0.0
 * Modernizr: Version 2.6.2
 * Bootstrap: Version 3.0.0
