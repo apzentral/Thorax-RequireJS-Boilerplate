@@ -5,6 +5,10 @@ Thorax and RequireJS Boilerplate for rapid development.
 
 This boilerplate use "http://html5boilerplate.com/" as a main boilerplate for HTML markup with Bootstrap.
 
+### Build
+
+run with this command at the app root `r.js -o js/libs/build.js`
+
 ### Libraries Version
 
 * Html5Boilerplate: Version 4.2.0
@@ -18,3 +22,4 @@ This boilerplate use "http://html5boilerplate.com/" as a main boilerplate for HT
 * Modernizr: Version 2.6.2
 * Bootstrap: Version 3.0.0
 * FontAwesome: Version 3.2.1
+* R.js: Version 2.1.8
