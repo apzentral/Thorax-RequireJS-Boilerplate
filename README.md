@@ -23,3 +23,7 @@ run with this command at the app root `r.js -o js/lib/build.js`
 * Bootstrap: Version 3.0.0
 * FontAwesome: Version 3.2.1
 * R.js: Version 2.1.8
+
+### Versions (v 0.0.1)
+
+* v 0.0.1 - Initial Released
