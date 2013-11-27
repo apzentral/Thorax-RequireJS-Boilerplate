@@ -47,5 +47,4 @@ require([
 	$('#app-canvas').append(view.el);
 
 	Backbone.history.start();
-
 });
