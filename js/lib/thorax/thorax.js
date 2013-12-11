@@ -18,7 +18,24 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 //
-(function($) {
+(function(root, factory) {
+
+    // Set up Backbone appropriately for the environment.
+    if (typeof exports !== 'undefined') {
+        // Node/CommonJS, no need for jQuery in that case.
+        factory(root, exports, require('underscore'), Backbone);
+    } else if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['underscore', 'jquery', 'backbone', 'exports'], function(_, $, Backbone, exports) {
+            // Export global even in AMD case in case this script is loaded with
+            // others that may still expect a global Backbone.
+            root.Thorax = factory(root, exports, _, $, Backbone);
+        });
+    } else {
+        // Browser globals
+        root.Thorax = factory(root, {}, root._, (root.jQuery || root.Zepto || root.ender || root.$), root.Backbone);
+    }
+})(this, function(root, Thorax, _, $, Backbone) {
 
     /*global cloneInheritVars, createInheritVars, createRegistryWrapper, getValue, inheritVars */
 
@@ -42,7 +59,15 @@
         Handlebars.templates = {};
     }
 
-    var Thorax = this.Thorax = {
+    Thorax.VERSION = '2.0.0rc4';
+    Thorax.templatePathPrefix = '';
+    Thorax.Views = {};
+    Thorax.onException = function(name, err) {
+        throw err;
+    };
+    Thorax.templates = Handlebars.templates;
+
+    /*Thorax = {
         VERSION: '2.0.0rc4',
         templatePathPrefix: '',
         //view classes
@@ -57,7 +82,7 @@
         },
         //deprecated, here to ensure existing projects aren't mucked with
         templates: Handlebars.templates
-    };
+    };*/
 
     Thorax.View = Backbone.View.extend({
         constructor: function() {
@@ -2851,4 +2876,6 @@
 
     ;;
 
-})(jQuery);
+    return Thorax;
+
+});
