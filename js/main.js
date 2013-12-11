@@ -26,12 +26,12 @@ require.config({
     },
     paths: {
         jquery: 'lib/jquery/jquery.min',
-        underscore: 'lib/underscore/lodash.min',
-        backbone: 'lib/backbone/backbone',
-        localstorage: 'lib/backbone/localstorage',
+        underscore: 'lib/underscore/underscore.min',
+        backbone: 'lib/backbone/backbone.min',
+        localstorage: 'lib/backbone/localstorage.min',
         handlebars: 'lib/handlebars/handlebars.min',
-        thorax: 'lib/thorax/thorax',
-        text: 'lib/require/text'
+        thorax: 'lib/thorax/thorax.min',
+        text: 'lib/require/text.min'
     }
 });
 

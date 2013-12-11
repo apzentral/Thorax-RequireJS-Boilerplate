@@ -1,15 +1,14 @@
 define([
-	'underscore',
-	'backbone',
-	'common'
-], function( _, Backbone, Common ) {
+    'underscore',
+    'backbone',
+    'common'
+], function(_, Backbone, Common) {
 
-	return Backbone.Model.extend({
+    return Backbone.Model.extend({
 
-		// Default attributes for the model
-		defaults: {
-		},
+        // Default attributes for the model
+        defaults: {},
 
-	});
+    });
 
 });

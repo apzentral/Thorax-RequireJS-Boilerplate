@@ -1,12 +1,11 @@
 define([
-	'jquery',
-	'backbone',
-	'thorax'
-], function( $, Backbone, Thorax ) {
+    'jquery',
+    'backbone',
+    'thorax'
+], function($, Backbone, Thorax) {
 
-	return Thorax.Router.extend({
-		routes: {
-		}
-	});
+    return Thorax.Router.extend({
+        routes: {}
+    });
 
 });

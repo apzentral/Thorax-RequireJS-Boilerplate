@@ -13,19 +13,24 @@ run with this command at the app root `r.js -o js/lib/build.js`
 
 * Html5Boilerplate: Version 4.2.0
 * jQuery: Version 1.10.2
-* BackBone: Version 1.0.0
+* BackBone: Version 1.1.0
 * localstorage: Version 1.1.6
-* Lo-Dash: Version 1.3.1
-* RequireJS: Version 2.1.8
+* Underscore: Version 1.5.2
+* RequireJS: Version 2.1.9+
 * Thorax: Version 2.0.0rc4
-* Handlebars: Version 1.0.0
+* Handlebars: Version 1.1.2
 * Modernizr: Version 2.6.2
 * Bootstrap: Version 3.0.0
 * FontAwesome: Version 3.2.1
-* R.js: Version 2.1.8
+* R.js: Version 2.1.9+
 
 ### Versions (v 0.0.1)
 
-* v 0.0.2 - Upgrade Thorax to Version 2.0.0rc4
+* v 0.0.2 	- Upgrade Underscore to Version 1.5.2
+			- Upgrade BackBone to Version 1.1.0
+			- Upgrade Thorax to Version 2.0.0rc4
+			- Upgrade RequireJS to Version 2.1.9+
+			- Upgrade Handlebars to Version 1.1.2
+			- Upgrade R.js to Version 2.1.9+
 
-* v 0.0.1 - Initial Released
+* v 0.0.1 	- Initial Released
