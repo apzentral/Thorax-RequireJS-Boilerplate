@@ -1,16 +1,16 @@
 
 main.js
 ----------------
-lib/jquery/jquery.min.js
-lib/underscore/underscore.min.js
-lib/backbone/backbone.min.js
-lib/handlebars/handlebars.min.js
-lib/thorax/thorax.min.js
-lib/backbone/localstorage.min.js
+lib/jquery/jquery.js
+lib/underscore/underscore.js
+lib/backbone/backbone.js
+lib/handlebars/handlebars.js
+lib/thorax/thorax.js
+lib/backbone/localstorage.js
 common.js
 models/model.js
 collections/collection.js
-lib/require/text.min.js
+lib/require/text.js
 text!templates/app.handlebars
 views/app.js
 routers/approuter.js

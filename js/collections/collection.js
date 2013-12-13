@@ -1,11 +1,12 @@
 define([
     'underscore',
     'backbone',
+    'thorax',
     'localstorage',
     'models/model'
-], function(_, Backbone, Store, Model) {
+], function(_, Backbone, Thorax, Store, Model) {
 
-    var Collection = Backbone.Collection.extend({
+    return Thorax.Collection.extend({
 
         // Reference to this collection's model.
         model: Model,
@@ -14,6 +15,4 @@ define([
         localStorage: new Store('models-backbone'),
 
     });
-
-    return new Collection();
 });

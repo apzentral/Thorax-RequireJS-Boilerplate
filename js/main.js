@@ -25,13 +25,13 @@ require.config({
         }
     },
     paths: {
-        jquery: 'lib/jquery/jquery.min',
-        underscore: 'lib/underscore/underscore.min',
-        backbone: 'lib/backbone/backbone.min',
-        localstorage: 'lib/backbone/localstorage.min',
-        handlebars: 'lib/handlebars/handlebars.min',
-        thorax: 'lib/thorax/thorax.min',
-        text: 'lib/require/text.min'
+        jquery: 'lib/jquery/jquery',
+        underscore: 'lib/underscore/underscore',
+        backbone: 'lib/backbone/backbone',
+        localstorage: 'lib/backbone/localstorage',
+        handlebars: 'lib/handlebars/handlebars',
+        thorax: 'lib/thorax/thorax',
+        text: 'lib/require/text'
     }
 });
 
@@ -46,7 +46,7 @@ require([
 
     // Initialize the application view
     var view = new AppView();
-    $('#app-canvas').append(view.el);
+    view.appendTo('#app-canvas');
 
     Backbone.history.start();
 });

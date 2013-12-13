@@ -1,10 +1,11 @@
 define([
     'underscore',
     'backbone',
+    'thorax',
     'common'
-], function(_, Backbone, Common) {
+], function(_, Backbone, Thorax, Common) {
 
-    return Backbone.Model.extend({
+    return Thorax.Model.extend({
 
         // Default attributes for the model
         defaults: {},

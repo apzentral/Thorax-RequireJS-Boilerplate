@@ -1,1 +1,1 @@
-define(["underscore","backbone","common"],function(e,t,n){return t.Model.extend({defaults:{}})});
+define(["underscore","backbone","thorax","common"],function(e,t,n,r){return n.Model.extend({defaults:{}})});

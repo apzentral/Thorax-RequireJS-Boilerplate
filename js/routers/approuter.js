@@ -1,10 +1,9 @@
 define([
     'jquery',
-    'backbone',
-    'thorax'
-], function($, Backbone, Thorax) {
+    'backbone'
+], function($, Backbone) {
 
-    return Thorax.Router.extend({
+    return Backbone.Router.extend({
         routes: {}
     });
 
