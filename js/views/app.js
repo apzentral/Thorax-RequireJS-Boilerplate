@@ -16,10 +16,16 @@ define([
         template: Handlebars.compile(appTemplate),
 
         // Delegated events
-        events: {},
+        events: {
+            'click #click-btn': function() {
+                this.count++;
+                this.$('#click-view').text(this.count);
+            }
+        },
 
         // Setup app view
         initialize: function() {
+            this.count = 0;
             this.render();
         }
 

@@ -13,7 +13,7 @@ run with this command at the app root `r.js -o js/lib/build.js`
 
 * Html5Boilerplate: Version 4.2.0
 * jQuery: Version 1.10.2
-* BackBone: Version 1.1.0
+* BackBone: Version 1.0.0
 * localstorage: Version 1.1.6
 * Underscore: Version 1.5.2
 * RequireJS: Version 2.1.9+
@@ -27,7 +27,6 @@ run with this command at the app root `r.js -o js/lib/build.js`
 ### Versions (v 0.0.1)
 
 * v 0.0.2 	- Upgrade Underscore to Version 1.5.2
-			- Upgrade BackBone to Version 1.1.0
 			- Upgrade Thorax to Version 2.0.1
 			- Upgrade RequireJS to Version 2.1.9+
 			- Upgrade Handlebars to Version 1.1.2

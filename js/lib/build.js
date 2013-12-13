@@ -6,21 +6,11 @@
         name: 'main'
     }],
     shim: {
-        'underscore': {
-            exports: '_'
-        },
         'backbone': {
-            deps: [
-                'underscore',
-                'jquery'
-            ],
             exports: 'Backbone'
         },
         'thorax': {
             deps: [
-                'underscore',
-                'backbone',
-                'jquery',
                 'handlebars'
             ],
             exports: 'Thorax'
