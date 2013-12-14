@@ -23,6 +23,8 @@
         localstorage: 'lib/backbone/localstorage',
         handlebars: 'lib/handlebars/handlebars',
         thorax: 'lib/thorax/thorax',
-        text: 'lib/require/text'
+        text: 'lib/require/text',
+        uihelper: 'lib/ui-helper',
+        uihelpers: 'helpers/ui-helpers'
     }
 })

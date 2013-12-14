@@ -12,6 +12,8 @@ models/model.js
 collections/collection.js
 lib/require/text.js
 text!templates/app.handlebars
+lib/ui-helper/spin.js
+helpers/ui-helpers.js
 views/app.js
 routers/approuter.js
 main.js

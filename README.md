@@ -26,7 +26,8 @@ run with this command at the app root `r.js -o js/lib/build.js`
 
 ### Versions (v 0.0.1)
 
-* v 0.0.2 	- Upgrade Underscore to Version 1.5.2
+* v 0.0.2 	- Add Spinner to UIHelper
+			- Upgrade Underscore to Version 1.5.2
 			- Upgrade Thorax to Version 2.0.1
 			- Upgrade RequireJS to Version 2.1.9+
 			- Upgrade Handlebars to Version 1.1.2
