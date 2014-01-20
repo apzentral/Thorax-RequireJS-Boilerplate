@@ -14,6 +14,32 @@ define([
         // consistency and debugging purposes
         name: 'app',
 
+        collection: new Thorax.Collection([{
+            title: 'Html5Boilerplate'
+        }, {
+            title: 'jQuery'
+        }, {
+            title: 'BackBone'
+        }, {
+            title: 'localstorage'
+        }, {
+            title: 'Underscore'
+        }, {
+            title: 'Lo-Dash'
+        }, {
+            title: 'RequireJS'
+        }, {
+            title: 'Thorax'
+        }, {
+            title: 'Handlebars'
+        }, {
+            title: 'Modernizr'
+        }, {
+            title: 'Bootstrap'
+        }, {
+            title: 'FontAwesome'
+        }]),
+
         template: Handlebars.compile(appTemplate),
 
         // Delegated events

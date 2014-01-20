@@ -32,5 +32,6 @@ run with this command at the app root `r.js -o js/lib/build.js`
 			- Upgrade RequireJS to Version 2.1.9+
 			- Upgrade Handlebars to Version 1.1.2
 			- Upgrade R.js to Version 2.1.9+
+			- Change to use Collection to render
 
 * v 0.0.1 	- Initial Released
